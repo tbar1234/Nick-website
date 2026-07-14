@@ -11,11 +11,36 @@ export default function ContactForm() {
   // Wire this up to a real endpoint (e.g. Formspree, Resend, or an API
   // route that emails Pezzenteservices@gmail.com) before launch.
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
-    setStatus("submitting");
-    await new Promise((resolve) => setTimeout(resolve, 700));
+  e.preventDefault();
+
+  setStatus("submitting");
+
+  const form = e.currentTarget;
+
+  const formData = {
+    name: (form.elements.namedItem("name") as HTMLInputElement).value,
+    phone: (form.elements.namedItem("phone") as HTMLInputElement).value,
+    email: (form.elements.namedItem("email") as HTMLInputElement).value,
+    service: (form.elements.namedItem("service") as HTMLSelectElement).value,
+    message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+  };
+
+  const response = await fetch("/api/contact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(formData),
+  });
+
+  if (response.ok) {
     setStatus("sent");
+    form.reset();
+  } else {
+    alert("Something went wrong. Please try again.");
+    setStatus("idle");
   }
+}
 
   if (status === "sent") {
     return (

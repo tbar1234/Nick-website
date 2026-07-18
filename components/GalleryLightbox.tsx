@@ -88,9 +88,6 @@ export default function GalleryLightbox({
             priority
           />
         </div>
-        <p className="mt-4 font-mono text-xs uppercase tracking-[0.2em] text-sand/70">
-          {image.tag} — {index + 1} / {images.length}
-        </p>
       </div>
 
       <button

@@ -85,10 +85,7 @@ export default function Gallery() {
                 className="h-auto w-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/0 to-ink/0 opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-              <div className="absolute inset-x-0 bottom-0 flex translate-y-3 items-center justify-between p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-                <span className="font-mono text-[0.65rem] uppercase tracking-[0.16em] text-sand">
-                  {image.tag}
-                </span>
+              <div className="absolute inset-x-0 bottom-0 flex translate-y-3 items-center justify-end p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                 <Expand size={16} className="text-sand" />
               </div>
             </button>

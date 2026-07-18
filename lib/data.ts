@@ -95,7 +95,7 @@ export const services: Service[] = [
     description:
       "New garden beds and planting designs for homeowners ready to add color, structure, or curb appeal to their property.",
     icon: "Flower2",
-    bullets: ["Custom planting design", "New garden beds", "Foundation plantings", "Plant & shrub selection"],
+    bullets: ["Custom planting design", "New garden beds", "Plant & shrub selection"],
     tier: "project",
   },
   {
@@ -120,11 +120,10 @@ export const services: Service[] = [
 
 export type GalleryCategory =
   | "All"
-  | "Patios & Walkways"
+  | "Patios"
   | "Retaining Walls"
   | "Outdoor Living"
   | "Garden Design"
-  | "Pool Decks"
   | "Lawn Care";
 
 export type GalleryImage = {
@@ -139,7 +138,7 @@ export type GalleryImage = {
 export const galleryImages: GalleryImage[] = [
   { src: "/images/gallery-patio-wall-01.jpg", alt: "Paver patio with a natural stone seat wall bordering a lawn", category: "Patios & Walkways", tag: "Paver Patio — Seat Wall", width: 1440, height: 1920 },
   { src: "/images/gallery-firepit-01.jpg", alt: "Paver patio with a built-in fire pit and string lighting for evening entertaining", category: "Outdoor Living", tag: "Fire Pit Patio", width: 1920, height: 1440 },
-  { src: "/images/gallery-pool-deck-01.jpg", alt: "Paver pool deck surrounding an inground pool", category: "Pool Decks", tag: "Pool Deck Pavers", width: 1440, height: 1920 },
+  { src: "/images/gallery-pool-deck-01.jpg", alt: "Paver pool deck surrounding an inground pool", category: "Outdoor Living", tag: "Pool Deck Pavers", width: 1440, height: 1920 },
   { src: "/images/gallery-retaining-wall-01.jpg", alt: "Natural stone retaining wall with integrated steps", category: "Retaining Walls", tag: "Stone Retaining Wall", width: 1440, height: 1920 },
   { src: "/images/gallery-garden-bed-01.jpg", alt: "Foundation garden bed with mulch and mixed shrubs along a front walkway", category: "Garden Design", tag: "Foundation Planting", width: 1920, height: 1080 },
   { src: "/images/gallery-walkway-01.jpg", alt: "Paver walkway leading through a landscaped front yard", category: "Patios & Walkways", tag: "Paver Walkway", width: 1920, height: 1440 },
@@ -147,7 +146,7 @@ export const galleryImages: GalleryImage[] = [
   { src: "/images/gallery-retaining-wall-02.jpg", alt: "Tiered stone retaining wall on a sloped property", category: "Retaining Walls", tag: "Tiered Stone Wall", width: 1440, height: 1920 },
   { src: "/images/gallery-garden-bed-02.jpg", alt: "Mixed perennial and shrub garden bed with fresh mulch", category: "Garden Design", tag: "Perennial Garden Bed", width: 1920, height: 1440 },
   { src: "/images/gallery-walkway-steps-01.jpg", alt: "Paver walkway with stone steps connecting two levels of a yard", category: "Patios & Walkways", tag: "Paver Steps", width: 1440, height: 1920 },
-  { src: "/images/gallery-pool-deck-02.jpg", alt: "Wide paver pool deck with patterned border", category: "Pool Decks", tag: "Pool Deck Pavers", width: 1440, height: 1920 },
+  { src: "/images/gallery-pool-deck-02.jpg", alt: "Wide paver pool deck with patterned border", category: "Outdoor Living", tag: "Pool Deck Pavers", width: 1440, height: 1920 },
   { src: "/images/gallery-retaining-wall-03.jpg", alt: "Block retaining wall holding back a raised planting bed", category: "Retaining Walls", tag: "Segmental Block Wall", width: 1920, height: 1440 },
   { src: "/images/gallery-garden-bed-03.jpg", alt: "Mulched garden bed with layered shrub plantings", category: "Garden Design", tag: "Layered Shrub Bed", width: 1440, height: 1920 },
   { src: "/images/gallery-patio-02.jpg", alt: "Paver patio with covered pergola seating area", category: "Patios & Walkways", tag: "Patio & Pergola", width: 1440, height: 1920 },
@@ -162,17 +161,24 @@ export const galleryImages: GalleryImage[] = [
   { src: "/images/gallery-patio-furniture-01.jpg", alt: "Paver patio furnished with outdoor seating", category: "Outdoor Living", tag: "Patio Living Space", width: 1440, height: 1920 },
   { src: "/images/gallery-patio-aerial-01.jpg", alt: "Aerial view of a paver patio installation", category: "Patios & Walkways", tag: "Paver Patio", width: 1920, height: 1440 },
   { src: "/images/gallery-lawn-02.jpg", alt: "Well-maintained lawn with crisp bed edges", category: "Lawn Care", tag: "Lawn Maintenance", width: 1080, height: 1920 },
-  { src: "/images/gallery-pool-deck-03.jpg", alt: "Paver pool deck with surrounding landscaping", category: "Pool Decks", tag: "Pool Deck Pavers", width: 1440, height: 1920 },
+  { src: "/images/gallery-pool-deck-03.jpg", alt: "Paver pool deck with surrounding landscaping", category: "Outdoor Living", tag: "Pool Deck Pavers", width: 1440, height: 1920 },
   { src: "/images/gallery-walkway-evening-01.jpg", alt: "Stone walkway and steps lit by a lantern-style post light at dusk", category: "Patios & Walkways", tag: "Evening Walkway", width: 1440, height: 1920 },
+  {
+  src: "/images/IMG_5997.jpeg",
+  alt: "Backyard landscaping with pool, retaining walls, and manicured lawn",
+  category: "Outdoor Living",
+  tag: "Backyard Landscape",
+  width: 1440,
+  height: 1920,
+},
 ];
 
 export const galleryCategories: GalleryCategory[] = [
   "All",
-  "Patios & Walkways",
+  "Patios",
   "Retaining Walls",
   "Outdoor Living",
   "Garden Design",
-  "Pool Decks",
   "Lawn Care",
 ];
 
@@ -257,7 +263,7 @@ export const testimonials: Testimonial[] = [
   },
   {
     name: "Karen T.",
-    location: "Wethersfield, CT",
+    location: "Glastonbury, CT",
     rating: 5,
     quote: "Highly recommend them for lawn maintenance — easy to schedule, easy to reach, and it shows in the results.",
   },
@@ -266,7 +272,7 @@ export const testimonials: Testimonial[] = [
 // Hero stats — value is the large display line, label is the smaller line beneath it.
 export const stats = [
   { value: "5+", label: "Years Serving Glastonbury" },
-  { value: "150+", label: "Properties Maintained" },
+  { value: "100+", label: "Properties Maintained" },
   { value: "Residential", label: "& Commercial Service" },
   { value: "Free", label: "Estimates" },
 ];

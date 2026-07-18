@@ -67,8 +67,7 @@ export default function Services() {
           </div>
           <Reveal delay={120}>
             <p className="max-w-sm text-sand/70">
-              Every service below is handled in-house by our own crew — no
-              subcontractors passing your project down the line.
+              Every service below is handled in-house by our own crew
             </p>
           </Reveal>
         </div>
